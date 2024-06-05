@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cadastro.css">
+    <title>Página de Cadastro</title>
+
+</head>
+<body>
+    <div class="menu-principal">
+        <div class="titulo-principal-escrito">
+            <h4 class="conteúdo-principal-escrito-titulo">TEODORO</h4>
+        </div>
+        <div class="register-container">
+            <h2>Cadastro</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="botao-cadastro">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const registerForm = document.getElementById('register-form');
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            // Aqui você pode adicionar a lógica de cadastro no servidor
+            console.log('Nome:', name);
+            console.log('E-mail:', email);
+            console.log('Telefone:', phone);
+            console.log('Senha:', password);
+        });
+    </script>
+</body>
+</html>
